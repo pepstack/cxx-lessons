@@ -6,14 +6,18 @@
 class Animal
 {
 protected:
-
-public:
-
-    Animal ()
+    Animal (int age = 1) :
+        _age (age)
     {
         printf("Animal()\n");
     }
 
+    int _age;
+
+private:
+
+
+public:
 
     virtual ~Animal ()
     {
@@ -21,13 +25,18 @@ public:
     }
 
 
-    virtual void talk ()
+    int getAge ()
     {
-        printf("Animal: talk ()\n");
+        printf("Animal: age=%d\n", _age);
+        return _age;
     }
 
 
-private:
+    virtual void talk ()
+    {
+        printf("Animal: talk()\n");
+    }
 
-
+    // pure virtual function
+    virtual void eat () = 0;
 };

@@ -17,11 +17,14 @@ void test1 ()
 
 void test2 ()
 {
-    Animal *dog = new Dog();
+    Animal *an = new HabaDog ();
 
-    dog->talk();
+    an->talk();
+    an->eat();
 
-    delete dog;
+    an->getAge();
+
+    delete an;
 }
 
 

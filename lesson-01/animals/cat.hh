@@ -24,6 +24,12 @@ public:
         printf("Cat: miaomiao~\n");
     }
 
+
+    void eat ()
+    {
+        printf("Cat: eat~\n");
+    }
+
 private:
 
 
